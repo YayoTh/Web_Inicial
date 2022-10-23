@@ -6,11 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Web Inicial</title>
         <link rel="stylesheet" href="./css/css.css" />
+        <script>
+            window.onload = quitaGiro;
+            function quitaGiro(){
+                document.getElementById("espera").style.display = "none";
+            }
+        </script>
     </head>
     <body>
+        <div id="espera">
+            <p>Cargando...</p>
+            <dir id="giro"></dir>
+        </div>
         <div id="contenedor">
-            <div id="espera">
-                <dir id="giro"></dir>
+            <div class="cajaPapa">
+                <div class="cajaHija">
+                    <p>Saludos...</p>
+                </div>
             </div>
         </div>
     </body>

@@ -6,6 +6,8 @@
 #contenedor{
     width: 70%;
     margin: auto;
+    opacity: 1;
+    animation: mostrarWeb 3s 1;
 }
 #espera{
     width: 100%;
@@ -16,8 +18,52 @@
 
 }
 #espera #giro{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-right: 3px solid red;
     border-radius: 100%;
+    animation: giro 3s infinite;
+}
+@keyframes giro{
+    /*0deg es lo mismo que grados de 
+    giro porque es funcion rotate*/
+      0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes mostrarWeb{
+    /*0deg es lo mismo que grados de 
+    giro porque es funcion rotate*/
+      0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.cajaPapa{
+    position: relative;
+           /*top: ;
+          left: ;
+     right: 20px;
+     bottom: 0px;*/
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    border-radius: 3px;
+    background-color: bisque;
+}
+.cajaHija{
+    position: absolute;
+          top: 50%;
+         left: 50%;
+      z-index: 100;
+    transform: translate(-50%, -50%);
+       /*right: 15px;
+       bottom: 0px;*/
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgb(0, 72, 255);
+    border-radius: 3px;
+    background-color: deeppink;
+    box-shadow: 5px 5px 13px red;
+    box-shadow: 4px 4px 13px red;
+    box-shadow: 3px 3px 13px red;
+    box-shadow: 2px 2px 13px red;
+    box-shadow: 1px 1px 13px red;
 }
